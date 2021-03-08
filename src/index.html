@@ -12,9 +12,8 @@
 
     
 <script>
-function getTitle(){
-    let res = await getData('https://nubzowhjmtpqanaaanfv.supabase.co/rest/v1/test?select=*')
-    let title = res[0].gamename;
+async function getTitle(){
+    await getData('https://nubzowhjmtpqanaaanfv.supabase.co/rest/v1/test?select=*').then(data => title = JSON.stringify(data[0].gamename));
     return {
         title
     }
