@@ -1,0 +1,23 @@
+@import url("reset.css");
+
+html, body {
+    height: 100%;
+}
+
+
+@media (prefers-color-scheme: dark) {
+html, body {
+    background-color: #444; 
+    color: white;
+    display: flex;
+    
+}
+
+    a:link {
+        color: white;
+    }
+
+    a:visited {
+        color: white;
+    }
+}
