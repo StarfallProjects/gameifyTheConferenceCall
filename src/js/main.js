@@ -3,12 +3,17 @@ function getGameData() {
     init() {
       getData('https://nubzowhjmtpqanaaanfv.supabase.co/rest/v1/test?select=*')
       .then((data) => {
+        // Log the raw data response for reference
         console.log('raw data:',data);
+        
+        // Set component values
         this.title = data[0].gamename;
+        
+        // Update page title
+        document.title = this.title;
       });
     },
-    rawData: {},
-    title: 'loading...'
+    title: 'Loading...'
   }
 }
 
